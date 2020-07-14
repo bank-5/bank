@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>用户登陆界面</title>
   </head>
   <body>
-    aaa
+  <a href="UserServlet">登陆</a>
   </body>
 </html>

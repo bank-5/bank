@@ -1,5 +1,6 @@
 package com.zb.dao;
 
+import com.zb.pojo.User;
 import com.zb.utils.DBUtils;
 
 import java.sql.Connection;
@@ -14,15 +15,17 @@ public class UserDao {
         String sql = "select * from users";
         PreparedStatement ps = conn.prepareStatement(sql);
         ResultSet rs = ps.executeQuery();
-        User door = new User();
-        List<Door> list = new ArrayList<>();
+        User user = new User();
+        List<User> list = new ArrayList<>();
         while (rs.next()){
-            door = new Door();
-            door.setId(rs.getInt("id"));
-            door.setName(rs.getString("name"));
-            door.setTel(rs.getString("tel"));
-            door.setAddr(rs.getString("addr"));
-            list.add(door);
+            user = new User();
+            user.setIDnumber(rs.getString("IDnumber"));
+            user.setUsername(rs.getString("username"));
+            user.setPassword(rs.getString("password"));
+            user.setMoney(rs.getInt("money"));
+            user.setAddress(rs.getString("address"));
+            user.setPhone(rs.getString("phone"));
+            list.add(user);
         }
         System.out.println(list);
         DBUtils.close(conn);

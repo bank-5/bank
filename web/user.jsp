@@ -6,34 +6,47 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
     <title>用户欢迎界面</title>
+    <style>
+        body{
+            margin-top:100px;
+            text-align: center;
+        }
+        #table{
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<table border="1">
-    <tr>
-        <th class="width-40">序号</th>
-        <th>门店名称</th>
-        <th class="width-80">联系电话</th>
-        <th>门店地址</th>
-        <th class="width-80">操 作</th>
-    </tr>
-
-    <c:forEach items="${list}" var="door" varStatus="status">
+    <h1>欢迎<%=request.getAttribute("username")%>(先生/女士)登陆</h1>
+    <h2>您的基本信息如下</h2>
+    <table border="1" id="table">
         <tr>
-            <td>${status.count}</td>
-            <td>${door.name}</td>
-            <td>${door.tel}</td>
-            <td>${door.addr}</td>
-            <td>
-                <a href="${pageContext.request.contextPath}/doorDelete?id=${door.id}">删除</a>
-                &nbsp;|&nbsp;
-                <a href="${pageContext.request.contextPath}/doorInfo?id=${door.id}">修改</a>
-            </td>
+            <td>ID</td>
+            <td>用户身份证号</td>
+            <td>用户存款</td>
+            <td>用户名</td>
+            <td>用户密码</td>
+            <td>用户电话</td>
+            <td>用户籍贯</td>
         </tr>
-    </c:forEach>
-</table>
+
+        <c:forEach items="${list}" var="user" varStatus="status">
+            <tr>
+                <td>${status.count}</td>
+                <td>${user.IDnumber}</td>
+                <td>${user.username}</td>
+                <td>${user.password}</td>
+                <td>${user.money}</td>
+                <td>${user.address}</td>
+                <td>${user.phone}</td>
+            </tr>
+        </c:forEach>
+    </table>
 
 </body>
 </html>
