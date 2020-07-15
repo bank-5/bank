@@ -14,7 +14,7 @@ public class DBUtils {
             new ComboPooledDataSource("c3p0-config.xml");
     
     //1.通过连接池获取连接
-    public  static Connection getConnectionByDatasource(){
+    public static Connection getConnectionByDatasource(){
         Connection conn = null;
         try {
              conn = dataSource.getConnection();

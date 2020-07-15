@@ -11,6 +11,6 @@
     <title>用户登陆界面</title>
   </head>
   <body>
-  <a href="UserServlet">登陆</a>
+  <a href="${pageContext.request.contextPath}/UserServlet">登陆</a>
   </body>
 </html>

@@ -27,25 +27,31 @@
     <table border="1" id="table">
         <tr>
             <td>ID</td>
-            <td>用户身份证号</td>
-            <td>用户存款</td>
+            <td>身份证号</td>
             <td>用户名</td>
             <td>用户密码</td>
+            <td>用户存款</td>
             <td>用户电话</td>
             <td>用户籍贯</td>
+            <td colspan="5">请选择您要办理的业务</td>
         </tr>
 
         <c:forEach items="${list}" var="user" varStatus="status">
-            <tr>
-                <td>${status.count}</td>
-                <td>${user.IDnumber}</td>
-                <td>${user.username}</td>
-                <td>${user.password}</td>
-                <td>${user.money}</td>
-                <td>${user.address}</td>
-                <td>${user.phone}</td>
-            </tr>
-        </c:forEach>
+        <tr>
+            <td>${status.count}</td>
+            <td>${user.IDnumber}</td>
+            <td>${user.username}</td>
+            <td>${user.password}</td>
+            <td>${user.money}</td>
+            <td>${user.phone}</td>
+            <td>${user.address}</td>
+            <td><a href="saveMoney.jsp?username=${user.username}">存款</a></td>
+            <td><a href="takeMoney.jsp?username=${user.username}">取款</a></td>
+            <td><a href="UserServlet">修改信息</a></td>
+            <td><a href="${pageContext.request.contextPath}/UserDeleteServlet?username=${user.username}">注销用户</a></td>
+            <td><a href="index.jsp">退出登陆</a></td>
+        </tr>
+    </c:forEach>
     </table>
 
 </body>
