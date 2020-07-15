@@ -8,10 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>用户登陆界面</title>
+    <title>首页</title>
+    <style>
+    body{
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
   </head>
   <body>
-  <a href="${pageContext.request.contextPath}/UserServlet">登陆</a>
-  <a>分支提交测试</a>
+    <h1>首页</h1>
+    <hr>
+    <a href="${pageContext.request.contextPath}/register.jsp">注册</a>
   </body>
 </html>
