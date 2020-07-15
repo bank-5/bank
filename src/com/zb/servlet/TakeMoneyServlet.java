@@ -25,6 +25,6 @@ public class TakeMoneyServlet extends HttpServlet {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        response.sendRedirect(""+request.getContextPath()+"/index.jsp");
+        response.sendRedirect(""+request.getContextPath()+"/login.jsp");
     }
 }

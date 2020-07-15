@@ -16,6 +16,6 @@ public class UserDeleteServlet extends HttpServlet {
         String username = request.getParameter("username");
         UserDao userDao = new UserDao();
         userDao.deleteByUsername(username);
-        response.sendRedirect(""+request.getContextPath()+"/index.jsp");
+        response.sendRedirect(""+request.getContextPath()+"/login.jsp");
     }
 }
