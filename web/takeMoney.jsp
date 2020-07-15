@@ -19,10 +19,12 @@
 <body>
     <h2>欢迎<%=request.getAttribute("username")%>用户取款</h2>
     <br><br>
-    <form action="/SaveMoneyServlet">
+    <form action="/TakeMoneyServlet" method="post" autocomplete="off">
+        请输入您的身份证号
+        <input name="IDnumber" type="text"><br><br>
         请输入您的取款金额
-        <input name="money" type="text"> 元<br><br>
-        <input name="修改" type="reset" value="修改金额">
+        <input name="money" type="text"><br><br>
+        <input name="修改" type="reset" value="重置信息">
         <input name="提交" type="submit" value="确认提交">
     </form>
 </body>

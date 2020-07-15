@@ -21,7 +21,7 @@
     <br><br>
     <form action="/SaveMoneyServlet" method="post" autocomplete="off">
         请输入您的身份证号
-        <input name="IDnumber" type="text" autocomplete="off"><br><br>
+        <input name="IDnumber" type="text"><br><br>
         请输入您的存款金额
         <input name="money" type="text"><br><br>
         <input name="修改" type="reset" value="重置信息">

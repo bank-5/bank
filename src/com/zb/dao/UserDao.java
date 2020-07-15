@@ -42,6 +42,16 @@ public class UserDao {
         DBUtils.close(conn);
     }
 
+    public void takeMoney(User user) throws SQLException{
+        Connection conn = DBUtils.getConnectionByDatasource();
+        String sql = "update users set money = money-? where IDnumber=?";
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setInt(1,user.getMoney());
+        ps.setString(2,user.getIDnumber());
+        ps.executeUpdate();
+        DBUtils.close(conn);
+    }
+
     public void deleteByUsername(String username){
         Connection conn = null;
         try {
