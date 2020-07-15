@@ -48,6 +48,7 @@
             <td><a href="saveMoney.jsp?username=${user.username}">存款</a></td>
             <td><a href="takeMoney.jsp?username=${user.username}">取款</a></td>
             <td><a href="UserUpdateServlet">修改信息</a></td>
+            <td><a href="${pageContext.request.contextPath}/UserInfoServlet?IDnumber=${user.IDnumber}">修改信息</a></td>
             <td><a href="${pageContext.request.contextPath}/UserDeleteServlet?username=${user.username}">注销用户</a></td>
             <td><a href="login.jsp">退出登陆</a></td>
         </tr>
