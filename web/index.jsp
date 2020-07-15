@@ -8,9 +8,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>首页</title>
+    <style>
+    body{
+      margin: 0 auto;
+      text-align: center;
+    }
+  </style>
   </head>
   <body>
-    aaa
+    <h1>首页</h1>
+    <hr>
+    <a href="${pageContext.request.contextPath}/register.jsp">注册</a>
   </body>
 </html>
