@@ -22,8 +22,8 @@ public class AdmInfoServlet extends HttpServlet {
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String IDnumber = request.getParameter("IDnumber");
         UserDao userDao = new UserDao();
-        User user = userDao.getUserById(IDnumber);
-        request.setAttribute("user",user);
+      User user = userDao.getUserById(IDnumber);
+    request.setAttribute("user",user);
         request.getRequestDispatcher("/adm_update.jsp").forward(request,response);
     }
 }
