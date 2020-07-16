@@ -13,7 +13,7 @@ import java.io.IOException;
 public class AdmAddUserServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String IDnumber = request.getParameter("IDnumber");
+        String IDnumber  =   request.getParameter("IDnumber");
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Integer money = Integer.parseInt(request.getParameter("money"));
