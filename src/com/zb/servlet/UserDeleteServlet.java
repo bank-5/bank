@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+//刘子贤编写
 @WebServlet("/UserDeleteServlet")
 public class UserDeleteServlet extends HttpServlet {
     @Override
