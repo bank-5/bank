@@ -117,5 +117,22 @@ public class UserDao {
             DBUtils.close(conn);
         }
     }
-
+    public void insertUser(User user){
+        Connection conn = DBUtils.getConnectionByDatasource();
+        String sql = "insert into user values (null,?,?,?,?,?,?)";
+        try{
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1,user.getIDnumber());
+            ps.setString(2,user.getUsername());
+            ps.setString(3,user.getPassword());
+            ps.setInt(4,user.getMoney());
+            ps.setString(5,user.getAddress());
+            ps.setString(6,user.getPhone());
+            ps.executeUpdate();
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(conn);
+        }
+    }
 }
