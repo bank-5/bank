@@ -52,6 +52,7 @@
             <td><a href="${pageContext.request.contextPath}/UserInfoServlet?IDnumber=${user.IDnumber}">修改信息</a></td>
             <td><a href="${pageContext.request.contextPath}/UserDeleteServlet?username=${user.username}">注销用户</a></td>
             <td><a href="login.jsp">退出登陆</a></td>
+            aaaaaaaaa
         </tr>
     </c:forEach>
 </table>
